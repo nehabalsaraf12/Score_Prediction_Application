@@ -70,35 +70,35 @@ with st.container():
   col1, col2 = st.columns(2)
 
   with col1:
-    age = st.number_input("Age", min_value=10, max_value=100, value=20)[cite: 1]
-    gender = st.selectbox("Gender", ["Male", "Female", "Other"])[cite: 1]
+    age = st.number_input("Age", min_value=10, max_value=100, value=20)
+    gender = st.selectbox("Gender", ["Male", "Female", "Other"])
     course = st.selectbox(
         "Course", ["Science", "Arts", "Commerce", "Engineering", "Medicine"]
-    )[cite: 1]
+    )
     study_hours = st.number_input(
         "Study Hours", min_value=0.0, max_value=24.0, value=4.0
-    )[cite: 1]
+    )
     class_attendance = st.slider(
         "Class Attendance (%)", min_value=0, max_value=100, value=85
-    )[cite: 1]
-    internet_access = st.selectbox("Internet Access", ["Yes", "No"])[cite: 1]
+    )
+    internet_access = st.selectbox("Internet Access", ["Yes", "No"])
 
   with col2:
     sleep_hours = st.number_input(
         "Sleep Hours", min_value=0.0, max_value=24.0, value=7.0
-    )[cite: 1]
+    )
     sleep_quality = st.selectbox(
         "Sleep Quality", ["Poor", "Average", "Good", "Excellent"]
-    )[cite: 1]
+    )
     study_method = st.selectbox(
         "Study Method", ["Self-Study", "Online", "Group", "Classes"]
-    )[cite: 1]
+    )
     facility_rating = st.slider(
         "Facility Rating", min_value=1, max_value=5, value=3
-    )[cite: 1]
+    )
     exam_difficulty = st.selectbox(
         "Exam Difficulty", ["Easy", "Medium", "Hard"]
-    )[cite: 1]
+    )
 
   st.markdown("</div>", unsafe_allow_html=True)
 
@@ -107,7 +107,6 @@ if st.button("Run Prediction"):
   st.markdown('<div class="card">', unsafe_allow_html=True)
   st.subheader("Results")
 
-  # Note: Ensure categorical inputs are encoded similarly to your training pipeline if required.
   st.success(
       "Model successfully loaded! Connect your feature encoding and preprocessing"
       " pipeline here to output the prediction."
